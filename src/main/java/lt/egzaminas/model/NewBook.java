@@ -9,4 +9,5 @@ public class NewBook {
     public String author;
     public BigDecimal price;
     public Long quantity;
+    public int pageNum;
 }

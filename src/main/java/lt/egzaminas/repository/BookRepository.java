@@ -26,9 +26,9 @@ public class BookRepository {
         b1.title = "Book 1";
         b1.author = "Aiste Eimontaite";
 //        p1.image = "/samsung.jpg";
-//        p1.description = "Desc";
         b1.price = new BigDecimal("20.6");
         b1.quantity = 48L;
+        b1.pageNum = 100;
         books.add(b1);
 
         Book b2 = new Book();
@@ -36,9 +36,9 @@ public class BookRepository {
         b2.title = "Book 2";
         b2.author = "Aiste Eimontaite";
 //        p2.image = "/samsung.jpg";
-//        p2.description = "Desc";
         b2.price = new BigDecimal("14.6");
         b2.quantity = 25L;
+        b2.pageNum = 200;
         books.add(b2);
 
         Book b3 = new Book();
@@ -46,9 +46,9 @@ public class BookRepository {
         b3.title = "Book 3";
         b3.author = "Aiste Eimontaite";
 //        p2.image = "/samsung.jpg";
-//        p2.description = "Desc";
         b3.price = new BigDecimal("14.6");
         b3.quantity = 25L;
+        b3.pageNum = 100;
         books.add(b3);
 
         Book b4 = new Book();
@@ -56,9 +56,8 @@ public class BookRepository {
         b4.title = "Book 4";
         b4.author = "Aiste Eimontaite";
 //        p2.image = "/samsung.jpg";
-//        p2.description = "Desc";
         b4.price = new BigDecimal("14.6");
-        b4.quantity = 25L;
+        b4.pageNum = 200;
         books.add(b4);
 
         Book b5 = new Book();
@@ -66,9 +65,8 @@ public class BookRepository {
         b5.title = "Book 5";
         b5.author = "Aiste Eimontaite";
 //        p2.image = "/samsung.jpg";
-//        p2.description = "Desc";
         b5.price = new BigDecimal("14.6");
-        b5.quantity = 25L;
+        b5.pageNum = 100;
         books.add(b5);
 
         Book b6 = new Book();
@@ -76,9 +74,9 @@ public class BookRepository {
         b6.title = "Book 6";
         b6.author = "Aiste Eimontaite";
 //        p2.image = "/samsung.jpg";
-//        p2.description = "Desc";
         b6.price = new BigDecimal("14.6");
         b6.quantity = 25L;
+        b6.pageNum = 200;
         books.add(b6);
     }
 
@@ -89,7 +87,6 @@ public class BookRepository {
         book.author = b.author;
 //        book.image = b.image;
         book.title = b.title;
-//        book.description = b.description;
         book.quantity = b.quantity;
         books.add(book);
         return book;

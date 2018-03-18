@@ -46,6 +46,7 @@ public class BookController {
     	existingBook.quantity = b.quantity;
 //    	existingBook.description = b.description;
     	existingBook.price = b.price;
+    	existingBook.pageNum = b.pageNum;
 //    	existingBook.image = b.image;
         return existingBook;
     }

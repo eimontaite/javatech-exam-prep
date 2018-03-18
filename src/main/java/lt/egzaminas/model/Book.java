@@ -8,6 +8,7 @@ public class Book {
     public String title;
     public String author;
     public BigDecimal price;
+    public int pageNum;
     public Long quantity;
 
 }
