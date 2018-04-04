@@ -17,37 +17,33 @@ import lt.egzaminas.repository.BookRepository;
 @RestController
 public class BookController {
 
-    @Autowired
-    private BookRepository repository;
+	@Autowired
+	private BookRepository repository;
 
-    @GetMapping("/api/books")
-    public List<Book> getBooks() {
-        return repository.getBooks();
-    }
+	@GetMapping("/api/books")
+	public List<Book> getBooks() {
+		return repository.getBooks();
+	}
 
-    @GetMapping("/api/books/{bookId}")
-    public Book getBook(@PathVariable Long productId) {
-        return repository.getBooks().stream()
-                       .filter(p -> p.id.equals(productId))
-                       .findFirst()
-                       .orElseThrow(() -> new RuntimeException("Book not found"));
-    }
+	@GetMapping("/api/books/{bookId}")
+	public Book getBook(@PathVariable Long productId) {
+		return repository.getBooks().stream().filter(p -> p.id.equals(productId)).findFirst()
+				.orElseThrow(() -> new RuntimeException("Book not found"));
+	}
 
-    @PostMapping("/api/books")
-    public Book createBook(@RequestBody NewBook b) {
-        return repository.addBook(b);
-    }
+	@PostMapping("/api/books")
+	public Book createBook(@RequestBody NewBook b) {
+		return repository.addBook(b);
+	}
 
-    @PutMapping("/api/books/{bookId}")
-    public Book updateBook(@PathVariable Long bookId, @RequestBody NewBook b) {
-    	Book existingBook = getBook(bookId);
-    	existingBook.title = b.title;
-    	existingBook.author = b.author;
-    	existingBook.quantity = b.quantity;
-//    	existingBook.description = b.description;
-    	existingBook.price = b.price;
-    	existingBook.pageNum = b.pageNum;
-//    	existingBook.image = b.image;
-        return existingBook;
-    }
+	@PutMapping("/api/books/{bookId}")
+	public Book updateBook(@PathVariable Long bookId, @RequestBody NewBook b) {
+		Book existingBook = getBook(bookId);
+		existingBook.title = b.title;
+		existingBook.author = b.author;
+		existingBook.quantity = b.quantity;
+		existingBook.price = b.price;
+		existingBook.pageNum = b.pageNum;
+		return existingBook;
+	}
 }

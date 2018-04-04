@@ -1,6 +1,5 @@
 package lt.egzaminas.model;
 
-import java.math.BigDecimal;
 import java.util.Set;
 
 public class Institution {
